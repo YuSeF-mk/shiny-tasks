@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="author" content="Youssef Mellouk">
+  <meta name="description" content="rich featured Task management dashboard">
+  <title>SHINY LIST</title>
+  <link rel="icon" type="image/x-icon" href="./assets/shiny_logo.jpg">
+  <link rel="stylesheet" href="./css/style.css">
+  <script src="https://kit.fontawesome.com/620ba12140.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+  <header>
+    <div>
+      <button id="toggleDarkMode"><i class="fa-solid fa-moon"></i></button>
+      <button id="addTaskBtn" class="btn">ADD TASK</button>
+    </div>
+    <div id="searchContainer">
+      <i class="fa-solid fa-magnifying-glass"></i>
+      <input type="text" id="searchInput" placeholder="search Task">
+    </div>
+    <div class="filtersDiv">
+      <select id="filterbyStatus">
+        <option value="all" selected>All tasks</option>
+        <option value="pending">Pending</option>
+        <option value="completed">Completed</option>
+      </select>
+      <select id="filterByCategory">
+
+      </select>
+    </div>
+  </header>
+  <main>
+    <h2 id="todayDate" class="today-date">Today</h2>
+    <dialog id="taskFormDialog" class="modal">
+      <form id="taskForm">
+        <table>
+          <tr>
+            <td>task Title:</td>
+            <td colspan="2"><input type="text" name="title"><small class="errorText" id="titleError"></small></td>
+          </tr>
+          <tr>
+            <td>Priority:</td>
+            <td colspan="2">
+              <div id="rangeTd">
+                <input type="range" step="1" max="3" min="1" name="Priority">
+                <span id="priorityPreview"></span>
+              </div>
+            </td>
+          </tr>
+          <tr>
+            <td>Category:</td>
+            <td colspan="2"><input type="text" list="categoriesList" autocomplete="off" name="category"><small
+                class="errorText" id="CategoryError"></small>
+              <datalist id="categoriesList">
+              </datalist>
+            </td>
+          </tr>
+          <tr>
+            <td>Dead Line: </td>
+            <td colspan="2"><input type="date" name="deadLine"><small class="errorText" id="DeadLineError"></small></td>
+          </tr>
+          <tr>
+            <td><input type="submit" value="ADD" class="btn" id="submitTask"></td>
+            <td><input type="button" value="RESET" id="resetForm" class="btn"></td>
+            <td><input type="button" value="CANCEL" id="cancelForm" class="btn"></td>
+          </tr>
+        </table>
+      </form>
+    </dialog>
+    <dialog id="deleteDialog" class="modal">
+      <h3>Delete Task?</h3>
+      <p>Are you sure you want to permanently delete this task?</p>
+      <div class="modal-actions">
+        <button id="cancelDelete" class="btn">No, Keep</button>
+        <button id="confirmDelete" class="btn">Yes, Delete</button>
+      </div>
+    </dialog>
+    <ul id="tasksUl">
+    </ul>
+  </main>
+  <footer>
+    <div class="footer-content">
+      <div class="footer-logo">
+        <img src="./assets/shiny_logo.jpg" alt="shiny list project logo" width="30px">
+        <p>SHINY LIST</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://github.com/YuSeF-mk"><i class="fa-brands fa-square-github"></i>Github</a>
+        <a href="https://www.linkedin.com/in/youssefmk458/"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+        <a href="mailto:youssef.mk.458@gmail.com" title="youssef.mk.458@gmail.com"><i class="fa-regular fa-envelope"></i>Contact</a>
+      </div>
+      <p class="copyright">&copy; 2026 Youssef .Mk</p>
+    </div>
+  </footer>
+  <div id="toastMessage" class="toast hidden"></div>
+  <script src="../js/script.js" defer></script>
+</body>
+
+</html>
