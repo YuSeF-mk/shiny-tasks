@@ -2,9 +2,9 @@
 
 >Shiny Tasks Screenshots :  
 Screenshot 1  
-![Shiny Task Screenshot 1](assets/shiny_task_screenshot1.png)
+![Shiny Task Screenshot 1](assets/shiny_task_screenshot1.png)  
 Screenshot 2  
-![Shiny Task Screenshot 2](assets/shiny_task_screenshot2.png)
+![Shiny Task Screenshot 2](assets/shiny_task_screenshot2.png)  
 
 >Web Project : Shiny Tasks
 
