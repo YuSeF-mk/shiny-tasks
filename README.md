@@ -1,12 +1,12 @@
 >Live Demo : https://yusef-mk.github.io/shiny-tasks/
 
 >Shiny Tasks Screenshots :  
-Screenshot 1
+Screenshot 1  
 ![Shiny Task Screenshot 1](assets/shiny_task_screenshot1.png)
-Screenshot 2
+Screenshot 2  
 ![Shiny Task Screenshot 2](assets/shiny_task_screenshot2.png)
 
->Web Project : Habit Loop
+>Web Project : Shiny Tasks
 
 A high-performance Task Management Dashboard designed for  users to keep tasks structured. This application moves beyond simple lists, offering real-time filtering, category management, and deadline tracking with persistent storage.
 
